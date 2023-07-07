@@ -13,7 +13,7 @@ const languageData = {
 
 
 
-
+console.log(languageData)
 
 // Function to change the language
 function changeLanguage(e) {
@@ -435,6 +435,7 @@ function init() {
     const loadingScreen = document.querySelector(".loader-container");
     const contentElement = document.querySelector(".content");
 
+
     // Delay the rendering of the content for 1 second (simulating a loading screen)
     setTimeout(() => {
         loadingScreen.classList.toggle("active");
@@ -445,7 +446,6 @@ function init() {
         let difficulty = localStorage.getItem("difficulty");
         let game = localStorage.getItem("game");
 
-       
 
         if (difficulty && userData && storedLanguage) {
             render_screen_IV(languageData[storedLanguage])
@@ -469,6 +469,8 @@ function init() {
 
         // Render the appropriate screen based on the stored language, or render the first screen with English as the default language
     }, 1000);
+
+
 }
 
 init(); // Call the init function to start the application
