@@ -403,6 +403,7 @@ function init() {
       render_screen_II(languageData[storedLanguage]);
     }
 
+    console.log(languageData, storedLanguage)
     if (!storedLanguage) {
       render_screen_I(languageData["en"]);
     }
