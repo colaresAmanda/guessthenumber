@@ -1,0 +1,336 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #27272a;
+}
+
+/* Body Styles */
+body {
+  background-color: #fafafa;
+}
+
+/* Container Styles */
+.container {
+  min-height: calc(100vh - 6rem);
+  background-color: #fff;
+  margin: 1rem 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* Game Title Styles */
+  /* Buttons Styles */
+}
+.container #gameTitle {
+  font-size: 2rem;
+  text-align: center;
+}
+.container #gameTitle span {
+  color: #7B44F2;
+}
+.container #gameDescription {
+  text-align: justify;
+}
+.container #errorMessage {
+  position: relative;
+  right: -40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all ease-in-out;
+}
+.container #errorMessage.active {
+  position: relative;
+  right: 0rem;
+}
+.container #errorMessage p {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f24444;
+  border: thin solid #f24444;
+  color: #fff;
+  border-radius: 0.3333333333rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+.container #errorMessage span {
+  background-color: #f24444;
+  display: flex;
+  align-items: center;
+  border-radius: 0.3333333333rem 0 0 0.3333333333rem;
+  color: #fff;
+  height: 100%;
+}
+.container .buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.container .buttons button {
+  height: 5rem;
+  padding: 0 2rem;
+  border: none;
+  background-color: #a1a1aa;
+  font-weight: 800;
+  color: #fff;
+  border-radius: 0.3333333333rem;
+}
+.container .buttons button:hover {
+  background-color: #7B44F2;
+  cursor: pointer;
+}
+.container .t-small {
+  font-size: 1rem;
+  color: #a1a1aa;
+}
+.container nav button {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container nav button span {
+  font-size: 2rem;
+  color: #a1a1aa;
+}
+.container nav button p {
+  font-size: 1rem;
+  color: #a1a1aa;
+}
+.container nav button:hover span {
+  color: #7B44F2;
+}
+.container nav button:hover p {
+  color: #7B44F2;
+}
+
+/* Loader Styles */
+.loader-container {
+  display: none;
+}
+.loader-container.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 2rem);
+}
+
+/* Content Styles */
+.content {
+  display: none;
+  height: 100%;
+}
+.content.active {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 100%;
+}
+.screen #sucessMessage {
+  background-color: #84F216;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.screen #attemptsNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a1a1aa;
+}
+.screen .top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.screen .bottom .t-small {
+  margin-bottom: 0.5rem;
+}
+.screen .bottom button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #a1a1aa;
+  font-weight: 800;
+}
+.screen .bottom button p,
+.screen .bottom button span {
+  color: #fff;
+}
+.screen .bottom button:hover {
+  background-color: #7B44F2;
+  cursor: pointer;
+}
+.screen .bottom form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.screen .bottom form .form-control {
+  display: flex;
+  flex-direction: column;
+}
+.screen .bottom form .form-control input {
+  padding: 0.5rem 1rem;
+  background-color: #fafafa;
+  border: none;
+  color: #27272a;
+}
+.screen .bottom form .form-control input:focus {
+  outline: thin solid #7B44F2;
+  color: #7B44F2;
+  border-radius: 0.3333333333rem;
+}
+.screen .bottom form .form-control button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3333333333rem;
+  font-weight: 400;
+}
+.screen .bottom form .form-control button span {
+  transform: rotate(180deg);
+  font-size: 1.5rem;
+}
+
+#user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#user-info p {
+  word-wrap: normal;
+}
+#user-info p span {
+  color: #7B44F2;
+}
+
+.top h3 {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Container Styles */
+  .container {
+    min-height: calc(100vh - 48rem);
+    background-color: #fff;
+    margin: 8rem 4rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* Game Title Styles */
+  }
+  #user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  #user-info p {
+    word-wrap: normal;
+  }
+  #user-info p span {
+    color: #7B44F2;
+  }
+  /* Content Styles */
+  .content {
+    display: none;
+    height: 100%;
+  }
+  .content.active {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 6rem;
+  }
+  .loader-container {
+    display: none;
+  }
+  .loader-container.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 16rem);
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* Container Styles */
+  .container {
+    min-height: calc(100vh - 35rem);
+    background-color: #fff;
+    margin: 2rem 15rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* Game Title Styles */
+  }
+  .container #gameTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .container #gameTitle span {
+    color: #7B44F2;
+  }
+  .container .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .container .buttons button {
+    height: 3rem;
+    padding: 0 2rem;
+    border: none;
+    background-color: #a1a1aa;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 0.3333333333rem;
+  }
+  .container .buttons button:hover {
+    background-color: #7B44F2;
+    cursor: pointer;
+  }
+  .container #errorMessage {
+    position: relative;
+    right: -50rem;
+  }
+  /* Content Styles */
+  .content {
+    display: none;
+    height: 100%;
+  }
+  .content.active {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 5rem;
+  }
+  .loader-container {
+    display: none;
+  }
+  .loader-container.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 4rem);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
