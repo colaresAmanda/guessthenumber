@@ -13,7 +13,6 @@ const languageData = {
 
 
 
-console.log(languageData)
 
 // Function to change the language
 function changeLanguage(e) {
@@ -446,6 +445,9 @@ function init() {
         let difficulty = localStorage.getItem("difficulty");
         let game = localStorage.getItem("game");
 
+        if (!storedLanguage) {
+            render_screen_I(languageData["en"])
+        }
 
         if (difficulty && userData && storedLanguage) {
             render_screen_IV(languageData[storedLanguage])
@@ -453,19 +455,17 @@ function init() {
         if (game && storedLanguage) {
             render_screen_V(languageData[storedLanguage])
         }
-        if (!difficulty) {
+
+
+        if (!difficulty && storedLanguage) {
             render_screen_III(languageData[storedLanguage])
         }
 
-        if (!userData) {
+        if (!userData && storedLanguage) {
             render_screen_II(languageData[storedLanguage])
         }
 
-        console.log(storedLanguage, languageData, )
-        if (!storedLanguage) {
-            render_screen_I(languageData["en"])
-        }
-
+        
 
         // Render the appropriate screen based on the stored language, or render the first screen with English as the default language
     }, 1000);
